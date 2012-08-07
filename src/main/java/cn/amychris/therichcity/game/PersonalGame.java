@@ -2,10 +2,10 @@ package cn.amychris.therichcity.game;
 
 import java.util.List;
 
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.IllegalOperationException;
 import cn.amychris.therichcity.game.card.ConstructureCard;
 import cn.amychris.therichcity.game.card.RoleCard;
+import cn.amychris.therichcity.model.User;
 
 public class PersonalGame implements Game {
 

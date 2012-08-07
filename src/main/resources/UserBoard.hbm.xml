@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="theRichCity" package="cn.amychris.therichcity.model" auto-import="true">
+
+	<class name="UserBoard" table="t_userboard">
+		<id name="uuid" type="java.lang.Integer" unsaved-value="null">
+			<column name="uuid" length="8" not-null="true"/>
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="isHost" type="java.lang.Boolean">
+			<column name="is_host" length="1" not-null="true"/>
+		</property>
+		
+		<property name="creationDate" type="java.util.Date">
+			<column name="crt_dt" />
+		</property>
+		
+		<property name="lastUpdateTime" type="java.util.Date">
+			<column name="lst_updt_tme" />
+		</property>
+		
+		<one-to-one name="user" class="cn.amychris.therichcity.model.User" fetch="join" cascade="none" constrained="true" >
+		</one-to-one>
+		
+		<many-to-one name="board" class="cn.amychris.therichcity.model.Board" fetch="select" cascade="none">
+			<column name="board" />
+		</many-to-one>
+		
+		
+	</class>
+	
+	
+
+</hibernate-mapping>

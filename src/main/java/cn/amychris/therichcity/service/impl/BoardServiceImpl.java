@@ -8,9 +8,9 @@ import java.util.Map;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import cn.amychris.therichcity.entity.Board;
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.BoardServiceException;
+import cn.amychris.therichcity.model.Board;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.BoardService;
 
 @Scope("singleton")
@@ -27,9 +27,9 @@ public class BoardServiceImpl implements BoardService {
 	public List<Board> getAllBoards() {
 		List<Board> re = new ArrayList<Board>();
 
-		for ( Board t : boards.values() ) {
-			re.add( ( Board ) t.clone() );
-		}
+//		for ( Board t : boards.values() ) {
+//			re.add( ( Board ) t.clone() );
+//		}
 
 		return re;
 	}
@@ -45,8 +45,8 @@ public class BoardServiceImpl implements BoardService {
 
 		Board board = new Board();
 		board.setBoardNumber( boardNumber );
-		board.setBoardMaster( boardCreator );
-		board.setMaxPlayers( this.getMaxPlayersPerBoard() );
+		
+		board.setMaxPlayers( (byte)this.getMaxPlayersPerBoard() );
 
 		//boards.put( boardNumber, board );
 		userBoards.put( boardCreator, board );
@@ -63,11 +63,7 @@ public class BoardServiceImpl implements BoardService {
 		
 		Board board = this.getBoard( boardNumber );
 		
-		if ( board.getMaxPlayers() == board.getUsers().size() ) {
-			throw new BoardServiceException( "Board[" + board + "] is already full." );
-		}
 		
-		board.getUsers().add( user );
 	}
 
 	@Override
@@ -84,7 +80,7 @@ public class BoardServiceImpl implements BoardService {
 			throw new BoardServiceException( "User[" + user + " has not joined any boards." );
 		}
 		
-		board.getUsers().remove( user );
+		
 		this.userBoards.remove( user );
 
 	}

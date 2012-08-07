@@ -1,8 +1,8 @@
 package cn.amychris.therichcity.action.impl;
 
 import cn.amychris.therichcity.action.LoginAction;
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.form.UserForm;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.UserService;
 
 public class LoginActionImpl extends BaseActionImpl implements LoginAction {

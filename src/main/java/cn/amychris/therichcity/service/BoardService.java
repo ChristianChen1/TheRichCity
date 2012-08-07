@@ -2,8 +2,8 @@ package cn.amychris.therichcity.service;
 
 import java.util.List;
 
-import cn.amychris.therichcity.entity.Board;
-import cn.amychris.therichcity.entity.User;
+import cn.amychris.therichcity.model.Board;
+import cn.amychris.therichcity.model.User;
 
 public interface BoardService {
 	

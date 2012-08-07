@@ -4,17 +4,16 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.google.gson.Gson;
 
-public class StringUtil {
+public class StringUtil extends StringUtils {
 
 	public static final int UUID_LENGTH = 32;
 
 	public static final String EMAIL_REGEX = "\\w+(\\.\\w+)*@\\w+(\\.\\w+)+";
 
-	public static boolean isBlank (String string) {
-		return (null == string || string.trim().length() == 0);
-	}
 
 	public static boolean isEmailAddress (String emailAddress) {
 		if ( null == emailAddress || emailAddress.length() == 0 ) {

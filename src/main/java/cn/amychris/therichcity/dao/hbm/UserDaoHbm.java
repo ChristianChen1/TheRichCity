@@ -11,7 +11,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import cn.amychris.therichcity.dao.UserDao;
-import cn.amychris.therichcity.entity.User;
+import cn.amychris.therichcity.model.User;
 
 /*
  * @author Amy Zhang
@@ -48,7 +48,7 @@ public class UserDaoHbm implements UserDao {
 		}
 
 		user.setUuid( null );
-		user.setRegisterDate( new Date() );
+		//user.setRegisterDate( new Date() );
 		return (Long) this.hibernateTemplate.save( user );
 	}
 
@@ -76,7 +76,7 @@ public class UserDaoHbm implements UserDao {
 	@Override
 	public void update ( User user ) {
 		user.setLastUpdateTime( null );
-		user.setRegisterDate( null );
+		//user.setRegisterDate( null );
 		this.hibernateTemplate.update( user );
 	}
 

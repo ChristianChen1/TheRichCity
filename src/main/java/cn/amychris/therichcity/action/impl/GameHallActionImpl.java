@@ -4,8 +4,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import cn.amychris.therichcity.action.GameHallAction;
-import cn.amychris.therichcity.entity.Board;
-import cn.amychris.therichcity.entity.User;
+import cn.amychris.therichcity.model.Board;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.BoardService;
 import cn.amychris.therichcity.service.UserService;
 
