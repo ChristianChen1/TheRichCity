@@ -5,27 +5,18 @@
 <hibernate-mapping schema="theRichCity" package="cn.amychris.therichcity.entity" auto-import="true">
 
 	<class name="Board" table="t_user">
-		<id name="uuid" type="java.lang.Long" unsaved-value="null">
-			<column name="uuid" length="8" not-null="true"/>
-			<generator class="identity"/>
+		<id name="uuid" type="java.lang.Short" unsaved-value="null">
+			<column name="uuid" length="2" not-null="true"/>
+			<generator class="assigned"/>
 		</id>
 		
-		<property name="name" type="java.lang.String">
-			<column name="nme" length="20" not-null="true"/>
+		<property name="isStarted" type="java.lang.Boolean">
+			<column name="is_sted" length="1" not-null="true"/>
 		</property>
 		
-		<property name="password" type="java.lang.String">
-			<column name="pwd" length="20" not-null="true"/>
+		<property name="maxPlayers" type="java.lang.Byte">
+			<column name="max_pls" length="1" not-null="true"/>
 		</property>
-		
-		<property name="email" type="java.lang.String">
-			<column name="eml" length="30" not-null="true"/>
-		</property>
-		
-		<property name="score" type="java.lang.Long">
-			<column name="score" length="4" not-null="false"/>
-		</property>		
-
 		
 		<property name="registerDate" type="java.util.Date">
 			<column name="rgst_dt" />
@@ -34,6 +25,7 @@
 		<property name="lastUpdateTime" type="java.util.Date">
 			<column name="lst_updt_tme" />
 		</property>
+		
 	</class>
 	
 	

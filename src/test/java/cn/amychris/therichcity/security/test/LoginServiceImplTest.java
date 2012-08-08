@@ -3,9 +3,9 @@ package cn.amychris.therichcity.security.test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.ExceedingMaxLoginUsersException;
 import cn.amychris.therichcity.exception.SecurityServiceException;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.UserService;
 import cn.amychris.therichcity.service.impl.UserServiceImpl;
 

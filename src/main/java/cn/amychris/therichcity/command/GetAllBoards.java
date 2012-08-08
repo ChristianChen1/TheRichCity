@@ -5,8 +5,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import cn.amychris.therichcity.entity.Board;
 import cn.amychris.therichcity.exception.CommandExecutingException;
+import cn.amychris.therichcity.model.Board;
 import cn.amychris.therichcity.service.BoardService;
 import cn.amychris.therichcity.util.StringUtil;
 

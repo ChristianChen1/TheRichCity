@@ -2,11 +2,11 @@
 <!DOCTYPE hibernate-mapping PUBLIC  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping schema="theRichCity" package="cn.amychris.therichcity.entity" auto-import="true">
+<hibernate-mapping schema="theRichCity" package="cn.amychris.therichcity.model" auto-import="true">
 
 	<class name="User" table="t_user">
 		<id name="uuid" type="java.lang.Long" unsaved-value="null">
-			<column name="uuid" length="8" not-null="true"/>
+			<column name="uuid" length="18" not-null="true"/>
 			<generator class="identity"/>
 		</id>
 		
@@ -23,17 +23,17 @@
 		</property>
 		
 		<property name="score" type="java.lang.Long">
-			<column name="score" length="4" not-null="false"/>
+			<column name="score" length="18" not-null="false"/>
 		</property>		
 
-		
-		<property name="registerDate" type="java.util.Date">
+		<property name="creationDate" type="java.util.Date">
 			<column name="rgst_dt" />
 		</property>
 		
 		<property name="lastUpdateTime" type="java.util.Date">
 			<column name="lst_updt_tme" />
 		</property>
+		
 	</class>
 	
 	

@@ -1,8 +1,8 @@
 package cn.amychris.therichcity.command;
 
-import cn.amychris.therichcity.entity.Board;
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.CommandExecutingException;
+import cn.amychris.therichcity.model.Board;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.BoardService;
 import cn.amychris.therichcity.util.StringUtil;
 

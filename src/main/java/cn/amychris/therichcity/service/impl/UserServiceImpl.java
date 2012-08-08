@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import cn.amychris.therichcity.dao.UserDao;
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.ExceedingMaxLoginUsersException;
 import cn.amychris.therichcity.exception.SecurityServiceException;
 import cn.amychris.therichcity.exception.UserNotfoundException;
+import cn.amychris.therichcity.model.User;
 import cn.amychris.therichcity.service.UserService;
 
 @Scope("singleton")

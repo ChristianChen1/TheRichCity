@@ -2,7 +2,7 @@ package cn.amychris.therichcity.dao;
 
 import java.util.List;
 
-import cn.amychris.therichcity.entity.User;
+import cn.amychris.therichcity.model.User;
 
 public interface UserDao {
 	

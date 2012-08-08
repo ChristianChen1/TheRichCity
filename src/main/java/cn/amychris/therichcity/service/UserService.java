@@ -2,9 +2,9 @@ package cn.amychris.therichcity.service;
 
 import java.util.List;
 
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.ExceedingMaxLoginUsersException;
 import cn.amychris.therichcity.exception.SecurityServiceException;
+import cn.amychris.therichcity.model.User;
 
 public interface UserService {
 

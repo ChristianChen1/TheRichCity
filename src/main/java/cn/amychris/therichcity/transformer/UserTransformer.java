@@ -2,9 +2,9 @@ package cn.amychris.therichcity.transformer;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import cn.amychris.therichcity.entity.User;
 import cn.amychris.therichcity.exception.UserTransformingException;
 import cn.amychris.therichcity.form.UserForm;
+import cn.amychris.therichcity.model.User;
 
 public class UserTransformer {
 
